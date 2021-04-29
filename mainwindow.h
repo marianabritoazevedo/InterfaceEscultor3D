@@ -37,8 +37,11 @@ public slots:
     void setRed(int _r);
     void setGreen(int _g);
     void setBlue(int _b);
+    void drawShape(int, int);
 
 private slots:
+    void on_action_novo_triggered();
+    void on_action_salvar_triggered();
     void on_action_inserir_voxel_triggered();
     void on_action_retirar_voxel_triggered();
     void on_action_inserir_caixa_triggered();
