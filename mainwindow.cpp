@@ -125,6 +125,12 @@ void MainWindow::drawShape(int hClick, int vClick)
     }
 }
 
+void MainWindow::updateCoords(int hClick, int vClick)
+{
+        ui->horizontalSliderDimX->setValue(vClick);
+        ui->horizontalSliderDimY->setValue(hClick);
+}
+
 void MainWindow::on_action_novo_triggered()
 {
     Dialog *dialog;

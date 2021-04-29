@@ -38,6 +38,7 @@ public slots:
     void setGreen(int _g);
     void setBlue(int _b);
     void drawShape(int, int);
+    void updateCoords(int, int);
 
 private slots:
     void on_action_novo_triggered();
