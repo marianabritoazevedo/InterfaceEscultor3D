@@ -17,23 +17,38 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_17">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <layout class="QGridLayout" name="gridLayout" rowstretch="12,58,30">
       <item row="0" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="70,30">
         <item>
          <widget class="QLabel" name="label_14">
+          <property name="font">
+           <font>
+            <family>Lucida Sans</family>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true"/>
           </property>
           <property name="text">
            <string>ESCULTOR DIGITAL 3D</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QGroupBox" name="groupBoxEsfera">
+          <property name="font">
+           <font>
+            <family>Lucida Sans</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
           <property name="autoFillBackground">
            <bool>false</bool>
           </property>
@@ -43,49 +58,50 @@
           <property name="title">
            <string>Esfera</string>
           </property>
-          <widget class="QWidget" name="layoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>30</y>
-             <width>211</width>
-             <height>46</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="text">
-               <string>Raio</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <widget class="QSlider" name="horizontalSliderRaio">
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-                <property name="maximum">
-                 <number>30</number>
-                </property>
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLCDNumber" name="lcdNumberRaio">
-                <property name="segmentStyle">
-                 <enum>QLCDNumber::Flat</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <family>Lucida Sans</family>
+              </font>
+             </property>
+             <property name="text">
+              <string>Raio</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QSlider" name="horizontalSliderRaio">
+               <property name="styleSheet">
+                <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>30</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLCDNumber" name="lcdNumberRaio">
+               <property name="segmentStyle">
+                <enum>QLCDNumber::Flat</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -99,6 +115,12 @@
          <layout class="QVBoxLayout" name="verticalLayout_19">
           <item>
            <widget class="QGroupBox" name="groupBoxElipse">
+            <property name="font">
+             <font>
+              <family>Lucida Sans</family>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -108,127 +130,144 @@
             <property name="title">
              <string>Elipse</string>
             </property>
-            <widget class="QWidget" name="layoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>30</y>
-               <width>211</width>
-               <height>171</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_5">
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout">
-                <item>
-                 <widget class="QLabel" name="label_2">
-                  <property name="text">
-                   <string>Rx</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderElipseRx">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberElipseRx">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_3">
-                <item>
-                 <widget class="QLabel" name="label_3">
-                  <property name="text">
-                   <string>Ry</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_3">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderElipseRy">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberElipseRy">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_4">
-                <item>
-                 <widget class="QLabel" name="label_4">
-                  <property name="text">
-                   <string>Rz</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_4">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderElipseRz">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberElipseRz">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>Rx</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QSlider" name="horizontalSliderElipseRx">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberElipseRx">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>Ry</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QSlider" name="horizontalSliderElipseRy">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberElipseRy">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>Rz</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QSlider" name="horizontalSliderElipseRz">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberElipseRz">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBoxCaixa">
+            <property name="font">
+             <font>
+              <family>Lucida Sans</family>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -238,123 +277,134 @@
             <property name="title">
              <string>Caixa</string>
             </property>
-            <widget class="QWidget" name="layoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>30</y>
-               <width>211</width>
-               <height>152</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_9">
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_7">
-                <item>
-                 <widget class="QLabel" name="label_6">
-                  <property name="text">
-                   <string>DimY</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_6">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderCaixaY">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberCaixaY">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_6">
-                <item>
-                 <widget class="QLabel" name="label_5">
-                  <property name="text">
-                   <string>DimX</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_5">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderCaixaX">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberCaixaX">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_8">
-                <item>
-                 <widget class="QLabel" name="label_7">
-                  <property name="text">
-                   <string>DimZ</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_7">
-                  <item>
-                   <widget class="QSlider" name="horizontalSliderCaixaZ">
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>30</number>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcdNumberCaixaZ">
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>DimY</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QSlider" name="horizontalSliderCaixaY">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberCaixaY">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>DimX</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QSlider" name="horizontalSliderCaixaX">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberCaixaX">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <family>Lucida Sans</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>DimZ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QSlider" name="horizontalSliderCaixaZ">
+                 <property name="styleSheet">
+                  <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="lcdNumberCaixaZ">
+                 <property name="segmentStyle">
+                  <enum>QLCDNumber::Flat</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -362,7 +412,7 @@
        </layout>
       </item>
       <item row="2" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="70">
+       <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="0">
         <item>
          <widget class="QGroupBox" name="groupBox_2">
           <property name="autoFillBackground">
@@ -372,183 +422,43 @@
            <string notr="true">background-color: rgb(225, 225, 225);</string>
           </property>
           <property name="title">
-           <string>Dimensões</string>
+           <string/>
           </property>
-          <widget class="QGroupBox" name="groupBox">
-           <property name="geometry">
-            <rect>
-             <x>560</x>
-             <y>0</y>
-             <width>239</width>
-             <height>225</height>
-            </rect>
-           </property>
-           <property name="autoFillBackground">
-            <bool>false</bool>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(225, 225, 225);</string>
-           </property>
-           <property name="title">
-            <string>Cor</string>
-           </property>
-           <widget class="QWidget" name="layoutWidget">
-            <property name="geometry">
-             <rect>
-              <x>21</x>
-              <y>21</y>
-              <width>201</width>
-              <height>185</height>
-             </rect>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_14">
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_13">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <item>
-                  <widget class="QLabel" name="label_8">
-                   <property name="text">
-                    <string>Red</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,0">
-                   <item>
-                    <widget class="QSlider" name="horizontalSliderRed">
-                     <property name="maximum">
-                      <number>255</number>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLCDNumber" name="lcdNumberRed">
-                     <property name="styleSheet">
-                      <string notr="true"/>
-                     </property>
-                     <property name="segmentStyle">
-                      <enum>QLCDNumber::Flat</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_11">
-                 <item>
-                  <widget class="QLabel" name="label_9">
-                   <property name="text">
-                    <string>Green</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_9">
-                   <item>
-                    <widget class="QSlider" name="horizontalSliderGreen">
-                     <property name="maximum">
-                      <number>255</number>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLCDNumber" name="lcdNumberGreen">
-                     <property name="segmentStyle">
-                      <enum>QLCDNumber::Flat</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_12">
-                 <item>
-                  <widget class="QLabel" name="label_10">
-                   <property name="text">
-                    <string>Blue</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_10">
-                   <item>
-                    <widget class="QSlider" name="horizontalSliderBlue">
-                     <property name="maximum">
-                      <number>255</number>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLCDNumber" name="lcdNumberBlue">
-                     <property name="segmentStyle">
-                      <enum>QLCDNumber::Flat</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_18">
-               <item>
-                <widget class="QPushButton" name="pushButtonColor">
-                 <property name="text">
-                  <string>Escolher Cor</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButtonMostraColor">
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>40</y>
-             <width>511</width>
-             <height>152</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_18">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_17">
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="font">
+              <font>
+               <family>Lucida Sans</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Dimensões</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
               <item>
                <widget class="QLabel" name="label_13">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Eixo Z</string>
                 </property>
                </widget>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
                 <item>
                  <widget class="QSlider" name="horizontalSliderDimZ">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -563,21 +473,28 @@
                 </item>
                </layout>
               </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_15">
               <item>
                <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Eixo X</string>
                 </property>
                </widget>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
                 <item>
                  <widget class="QSlider" name="horizontalSliderDimX">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -592,21 +509,28 @@
                 </item>
                </layout>
               </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_16">
               <item>
                <widget class="QLabel" name="label_12">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Eixo Y</string>
                 </property>
                </widget>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
                 <item>
                  <widget class="QSlider" name="horizontalSliderDimY">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+     background: #f4f4f4;
+	border: 2px solid #f4f4f4;
+  }</string>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -622,9 +546,171 @@
                </layout>
               </item>
              </layout>
-            </item>
-           </layout>
-          </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="font">
+              <font>
+               <family>Lucida Sans</family>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(225, 225, 225);</string>
+             </property>
+             <property name="title">
+              <string>Cor</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Red</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QSlider" name="horizontalSliderRed">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+     background: red;
+   }</string>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLCDNumber" name="lcdNumberRed">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="segmentStyle">
+                   <enum>QLCDNumber::Flat</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Green</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QSlider" name="horizontalSliderGreen">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+	background: rgb(0, 225, 0)
+   }</string>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLCDNumber" name="lcdNumberGreen">
+                  <property name="segmentStyle">
+                   <enum>QLCDNumber::Flat</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <family>Lucida Sans</family>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Blue</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QSlider" name="horizontalSliderBlue">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider::handle:horizontal {
+     
+	background-color: rgb(0, 170, 255);
+   }</string>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLCDNumber" name="lcdNumberBlue">
+                  <property name="segmentStyle">
+                   <enum>QLCDNumber::Flat</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <item>
+                 <widget class="QPushButton" name="pushButtonColor">
+                  <property name="font">
+                   <font>
+                    <family>Lucida Sans</family>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Escolher Cor</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButtonMostraColor">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -812,12 +898,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>239</y>
+     <x>732</x>
+     <y>233</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>240</y>
+     <x>802</x>
+     <y>234</y>
     </hint>
    </hints>
   </connection>
@@ -828,12 +914,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>298</y>
+     <x>732</x>
+     <y>293</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>299</y>
+     <x>802</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -844,12 +930,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>356</y>
+     <x>732</x>
+     <y>352</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>357</y>
+     <x>802</x>
+     <y>353</y>
     </hint>
    </hints>
   </connection>
@@ -912,8 +998,8 @@
      <y>629</y>
     </hint>
     <hint type="destinationlabel">
-     <x>742</x>
-     <y>640</y>
+     <x>735</x>
+     <y>650</y>
     </hint>
    </hints>
   </connection>
@@ -928,8 +1014,8 @@
      <y>688</y>
     </hint>
     <hint type="destinationlabel">
-     <x>740</x>
-     <y>696</y>
+     <x>735</x>
+     <y>700</y>
     </hint>
    </hints>
   </connection>
@@ -945,55 +1031,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>735</x>
-     <y>753</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderDimZ</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumberDimZ</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>462</x>
-     <y>668</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>485</x>
-     <y>652</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderDimX</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumberDimX</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>464</x>
-     <y>720</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>486</x>
-     <y>707</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderDimY</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumberDimY</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>467</x>
-     <y>772</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>476</x>
-     <y>752</y>
+     <y>750</y>
     </hint>
    </hints>
   </connection>
@@ -1020,8 +1058,8 @@
    <slot>setRed(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>718</x>
-     <y>650</y>
+     <x>665</x>
+     <y>649</y>
     </hint>
     <hint type="destinationlabel">
      <x>818</x>
@@ -1036,8 +1074,8 @@
    <slot>setGreen(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>672</x>
-     <y>687</y>
+     <x>665</x>
+     <y>699</y>
     </hint>
     <hint type="destinationlabel">
      <x>821</x>
@@ -1052,8 +1090,8 @@
    <slot>setBlue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>708</x>
-     <y>747</y>
+     <x>665</x>
+     <y>749</y>
     </hint>
     <hint type="destinationlabel">
      <x>821</x>
