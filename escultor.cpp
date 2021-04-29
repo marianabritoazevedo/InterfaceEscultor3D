@@ -206,7 +206,7 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
    }
 }
 
-void Escultor::writeOFF(char *filename)
+void Escultor::writeOFF(string filename)
 {
     int total, index, x, y, z;
     float lado = 0.5;
@@ -280,8 +280,46 @@ void Escultor::writeOFF(char *filename)
     f.close();
 }
 
-void Escultor::getPlano(int z)
+vector<vector<Voxel> > Escultor::getPlano(int i, int plano)
 {
-    vector <vector <Voxel> > retorno;
-    vector <Voxel> linha;
+    vector< vector<Voxel> > retorno;
+    vector<Voxel> linha;
+    if(plano == XY){
+        linha.resize(ny);
+        for(int x=0; x<nx; x++){
+            for(int y=0; y<ny; y++){
+                linha[y].r = v[x][y][i].r;
+                linha[y].g = v[x][y][i].g;
+                linha[y].b = v[x][y][i].b;
+                linha[y].isOn = v[x][y][i].isOn;
+            }
+            retorno.push_back(linha);
+        }
+    }
+    else if(plano == YZ){
+        linha.resize(nz);
+        for(int y=0; y<ny; y++){
+            for(int z=0; z<nz; z++){
+                linha[z].r = v[i][y][z].r;
+                linha[z].g = v[i][y][z].g;
+                linha[z].b = v[i][y][z].b;
+                linha[z].isOn = v[i][y][z].isOn;
+            }
+            retorno.push_back(linha);
+        }
+    }
+    else{
+        linha.resize(nx);
+        for(int z=0; z<nz; z++){
+            for(int x=0; x<nx; x++){
+                linha[x].r = v[x][i][z].r;
+                linha[x].g = v[x][i][z].g;
+                linha[x].b = v[x][i][z].b;
+                linha[x].isOn = v[x][i][z].isOn;
+            }
+            retorno.push_back(linha);
+        }
+    }
+    return retorno;
 }
+

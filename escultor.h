@@ -1,5 +1,9 @@
 #ifndef ESCULTOR_H
 #define ESCULTOR_H
+#include <vector>
+#include <string>
+
+using namespace std;
 
 struct Voxel {
   float r,g,b; // Colors
@@ -27,8 +31,8 @@ public:
     void cutSphere(int xcenter, int ycenter, int zcenter, int radius); //pronto
     void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-    void writeOFF(char *filename); //pronto
-    void getPlano(int z);
+    void writeOFF(string filename); //pronto
+    vector< vector<Voxel> > getPlano(int i, int plano=XY);
 };
 
 #endif // ESCULTOR_H
