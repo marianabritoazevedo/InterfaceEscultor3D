@@ -7,6 +7,8 @@ struct Voxel {
   bool isOn; // Included or not
 };
 
+enum{XY,ZX,YZ};
+
 class Escultor{
 protected:
   Voxel ***v; //Matriz 3D
@@ -26,6 +28,7 @@ public:
     void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     void writeOFF(char *filename); //pronto
+    void getPlano(int z);
 };
 
 #endif // ESCULTOR_H

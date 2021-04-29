@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include <cmath>
+#include <vector>
 
 using namespace std;
 
@@ -277,4 +278,10 @@ void Escultor::writeOFF(char *filename)
       }
     }
     f.close();
+}
+
+void Escultor::getPlano(int z)
+{
+    vector <vector <Voxel> > retorno;
+    vector <Voxel> linha;
 }

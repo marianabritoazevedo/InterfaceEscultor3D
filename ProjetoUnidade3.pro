@@ -12,12 +12,14 @@ SOURCES += \
     dialog.cpp \
     escultor.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    plotter.cpp
 
 HEADERS += \
     dialog.h \
     escultor.h \
-    mainwindow.h
+    mainwindow.h \
+    plotter.h
 
 FORMS += \
     dialog.ui \

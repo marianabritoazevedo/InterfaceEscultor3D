@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->horizontalSliderDimX->setMaximum(dimX-1);
     ui->horizontalSliderDimY->setMaximum(dimY-1);
     ui->horizontalSliderDimZ->setMaximum(dimZ-1);
+    ui->widgetDraw->loadMatriz(e->getPlano(ui->horizontalSliderDimZ->value()));
+
     connect(ui->actionAbreDialogo,
             SIGNAL(triggered(bool)),
             this,
@@ -111,7 +113,7 @@ void MainWindow::updateColor()
             QString().setNum(g) + "," +
             QString().setNum(b) + ");}";
     ui->pushButtonMostraColor->setStyleSheet(color);
-    //e->setColor(r,g,b,255);
+    e->setColor(r,g,b);
 }
 
 

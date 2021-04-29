@@ -40,7 +40,7 @@
           <property name="title">
            <string>Esfera</string>
           </property>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -90,7 +90,7 @@
       <item row="1" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="70,30">
         <item>
-         <widget class="QWidget" name="widget" native="true"/>
+         <widget class="Plotter" name="widgetDraw" native="true"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -105,7 +105,7 @@
             <property name="title">
              <string>Elipse</string>
             </property>
-            <widget class="QWidget" name="">
+            <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -235,7 +235,7 @@
             <property name="title">
              <string>Caixa</string>
             </property>
-            <widget class="QWidget" name="">
+            <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -389,7 +389,7 @@
            <property name="title">
             <string>Cor</string>
            </property>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>21</x>
@@ -523,7 +523,7 @@
             </layout>
            </widget>
           </widget>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <property name="geometry">
             <rect>
              <x>20</x>
@@ -649,6 +649,17 @@
    <addaction name="menuArquivo"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
@@ -660,6 +671,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Plotter</class>
+   <extends>QWidget</extends>
+   <header>plotter.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

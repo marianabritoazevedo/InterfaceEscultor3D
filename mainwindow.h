@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "escultor.h"
 #include "dialog.h"
+#include <QActionGroup>
 
 enum{
     CAIXA, NOCAIXA, ESFERA, NOESFERA, VOXEL, NOVOXEL, ELIPSE, NOELIPSE
@@ -28,6 +29,7 @@ private:
     int currentObject;
     void updateColor();
     Escultor *e;
+    QActionGroup *actionGroup;
 
 public slots:
     void sair();
