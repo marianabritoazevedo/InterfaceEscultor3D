@@ -39,14 +39,16 @@ public slots:
     void setBlue(int _b);
 
 private slots:
-    void on_action_inserir_voxel_triggered();
-    void on_action_retirar_voxel_triggered();
-    void on_action_inserir_caixa_triggered();
-    void on_action_retirar_caixa_triggered();
-    void on_action_inserir_esfera_triggered();
-    void on_action_retirar_esfera_triggered();
-    void on_action_inserir_elipse_triggered();
-    void on_action_retirar_elipse_triggered();
+    void novo_escultor();
+    void salvar();
+    void inserir_voxel();
+    void remover_voxel();
+    void inserir_caixa();
+    void remover_caixa();
+    void inserir_esfera();
+    void remover_esfera();
+    void inserir_elipse();
+    void remover_elipse();
 
 
 };

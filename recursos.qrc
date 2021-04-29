@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icones">
+        <file>recursos/inserir_caixa.png</file>
+        <file>recursos/inserir_elipse.png</file>
+        <file>recursos/inserir_esfera.png</file>
+        <file>recursos/inserir_voxel.png</file>
+        <file>recursos/new.png</file>
+        <file>recursos/remover_caixa.png</file>
+        <file>recursos/remover_elipse.png</file>
+        <file>recursos/remover_esfera.png</file>
+        <file>recursos/remover_voxel.png</file>
+        <file>recursos/salvar.png</file>
+    </qresource>
+</RCC>

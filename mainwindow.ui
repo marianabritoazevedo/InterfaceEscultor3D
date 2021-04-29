@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_17">
     <item>
@@ -659,6 +662,16 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNovo_Escultor"/>
+   <addaction name="actionSalvar"/>
+   <addaction name="actionInserir_voxel"/>
+   <addaction name="actionRemover_voxel"/>
+   <addaction name="actionInserir_caixa"/>
+   <addaction name="actionRemover_caixa"/>
+   <addaction name="actionInserir_esfera"/>
+   <addaction name="actionRemover_esfera"/>
+   <addaction name="actionInserir_elipse"/>
+   <addaction name="actionRemover_elipse"/>
   </widget>
   <action name="actionQuit">
    <property name="text">
@@ -670,6 +683,96 @@
     <string>Dimensionar Escultor</string>
    </property>
   </action>
+  <action name="actionNovo_Escultor">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/new.png</normaloff>:/icones/recursos/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Novo Escultor</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/salvar.png</normaloff>:/icones/recursos/salvar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </action>
+  <action name="actionInserir_voxel">
+   <property name="icon">
+    <iconset>
+     <normaloff>recursos/inserir_voxel.png</normaloff>recursos/inserir_voxel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Inserir voxel</string>
+   </property>
+  </action>
+  <action name="actionRemover_voxel">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/remover_voxel.png</normaloff>:/icones/recursos/remover_voxel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover voxel</string>
+   </property>
+  </action>
+  <action name="actionInserir_caixa">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/inserir_caixa.png</normaloff>:/icones/recursos/inserir_caixa.png</iconset>
+   </property>
+   <property name="text">
+    <string>Inserir caixa</string>
+   </property>
+  </action>
+  <action name="actionRemover_caixa">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/remover_caixa.png</normaloff>:/icones/recursos/remover_caixa.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover caixa</string>
+   </property>
+  </action>
+  <action name="actionInserir_esfera">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/inserir_esfera.png</normaloff>:/icones/recursos/inserir_esfera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Inserir esfera</string>
+   </property>
+  </action>
+  <action name="actionRemover_esfera">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/remover_esfera.png</normaloff>:/icones/recursos/remover_esfera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover esfera</string>
+   </property>
+  </action>
+  <action name="actionInserir_elipse">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/inserir_elipse.png</normaloff>:/icones/recursos/inserir_elipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Inserir elipse</string>
+   </property>
+  </action>
+  <action name="actionRemover_elipse">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/remover_elipse.png</normaloff>:/icones/recursos/remover_elipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remover elipse</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -679,7 +782,9 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>horizontalSliderRaio</sender>
@@ -953,11 +1058,181 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionNovo_Escultor</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>novo_escultor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSalvar</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>salvar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInserir_voxel</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>inserir_voxel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemover_voxel</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remover_voxel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInserir_caixa</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>inserir_caixa()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemover_caixa</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remover_caixa()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInserir_esfera</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>inserir_esfera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemover_esfera</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remover_esfera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInserir_elipse</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>inserir_elipse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemover_elipse</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remover_elipse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>sair()</slot>
   <slot>setRed(int)</slot>
   <slot>setGreen(int)</slot>
   <slot>setBlue(int)</slot>
+  <slot>novo_escultor()</slot>
+  <slot>salvar()</slot>
+  <slot>inserir_voxel()</slot>
+  <slot>remover_voxel()</slot>
+  <slot>inserir_caixa()</slot>
+  <slot>remover_caixa()</slot>
+  <slot>inserir_esfera()</slot>
+  <slot>remover_esfera()</slot>
+  <slot>inserir_elipse()</slot>
+  <slot>remover_elipse()</slot>
  </slots>
 </ui>
