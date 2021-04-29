@@ -78,13 +78,6 @@ void Plotter::paintEvent(QPaintEvent *e)
             }
         }
     }
-    /*for(int i = 0; i < nl; i++){
-        for(int j = 0; j < nc; j++){
-            brush.setColor(QColor(255,255,255,0));
-            p.setBrush(brush);
-            p.drawRect(j*dimCelula+borderh,i*dimCelula+borderv,dimCelula, dimCelula);
-        }
-    }*/
 
 }
 
@@ -114,6 +107,7 @@ void Plotter::mouseMoveEvent(QMouseEvent *event)
     int posh, posv;
     QRect ret;
     ret = rect();
+    ret.adjust(borderh, borderv, -borderh, -borderv);
     if(ret.contains(event->pos())&& pressed == true){
         posh = (event->pos().x()-borderh)*nc/ret.width();
         posv = (event->pos().y()-borderv)*nl/ret.height();

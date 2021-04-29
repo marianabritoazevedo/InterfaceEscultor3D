@@ -19,6 +19,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->widgetDraw->loadMatriz(e->getPlano(ui->horizontalSliderDimZ->value(),XY));
     //Action group -> Um botão é selecionado quando outro desseleciona
     actionGroup = new QActionGroup(this);
+    actionGroup->addAction(ui->actionInserir_caixa);
+    actionGroup->addAction(ui->actionRemover_caixa);
+    actionGroup->addAction(ui->actionInserir_elipse);
+    actionGroup->addAction(ui->actionRemover_elipse);
+    actionGroup->addAction(ui->actionInserir_esfera);
+    actionGroup->addAction(ui->actionRemover_esfera);
+    actionGroup->addAction(ui->actionInserir_voxel);
+    actionGroup->addAction(ui->actionRemover_voxel);
+    ui->actionInserir_voxel->setChecked(true);
 
     connect(ui->actionAbreDialogo,
             SIGNAL(triggered(bool)),
@@ -148,6 +157,8 @@ void MainWindow::novo_escultor()
         ui->horizontalSliderDimY->setMaximum(dimY-1);
         ui->horizontalSliderDimZ->setMaximum(dimZ-1);
     }
+    ui->widgetDraw->setTamanho(dimX, dimY);
+
 }
 
 void MainWindow::salvar()
