@@ -41,6 +41,18 @@ public slots:
     void updateCoords(int, int);
 
 private slots:
+<<<<<<< HEAD
+    void novo_escultor();
+    void salvar();
+    void inserir_voxel();
+    void remover_voxel();
+    void inserir_caixa();
+    void remover_caixa();
+    void inserir_esfera();
+    void remover_esfera();
+    void inserir_elipse();
+    void remover_elipse();
+=======
     void on_action_novo_triggered();
     void on_action_salvar_triggered();
     void on_action_inserir_voxel_triggered();
@@ -51,6 +63,7 @@ private slots:
     void on_action_retirar_esfera_triggered();
     void on_action_inserir_elipse_triggered();
     void on_action_retirar_elipse_triggered();
+>>>>>>> 1c73a1de87b96b93348b8af250cb7faa88dae9f0
 
 
 };

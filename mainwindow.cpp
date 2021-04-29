@@ -70,6 +70,14 @@ void MainWindow::setBlue(int _b)
     updateColor();
 }
 
+<<<<<<< HEAD
+void MainWindow::novo_escultor()
+{
+
+}
+
+void MainWindow::inserir_voxel()
+=======
 void MainWindow::drawShape(int hClick, int vClick)
 {
     switch(currentObject){
@@ -167,41 +175,42 @@ void MainWindow::on_action_salvar_triggered()
 }
 
 void MainWindow::on_action_inserir_voxel_triggered()
+>>>>>>> 1c73a1de87b96b93348b8af250cb7faa88dae9f0
 {
     currentObject = VOXEL;
 }
 
-void MainWindow::on_action_retirar_voxel_triggered()
+void MainWindow::remover_voxel()
 {
     currentObject = NOVOXEL;
 }
 
-void MainWindow::on_action_inserir_caixa_triggered()
+void MainWindow::inserir_caixa()
 {
     currentObject = CAIXA;
 }
 
-void MainWindow::on_action_retirar_caixa_triggered()
+void MainWindow::remover_caixa()
 {
     currentObject = NOCAIXA;
 }
 
-void MainWindow::on_action_inserir_esfera_triggered()
+void MainWindow::inserir_esfera()
 {
     currentObject = ESFERA;
 }
 
-void MainWindow::on_action_retirar_esfera_triggered()
+void MainWindow::remover_esfera()
 {
     currentObject = NOESFERA;
 }
 
-void MainWindow::on_action_inserir_elipse_triggered()
+void MainWindow::inserir_elipse()
 {
     currentObject = ELIPSE;
 }
 
-void MainWindow::on_action_retirar_elipse_triggered()
+void MainWindow::remover_elipse()
 {
     currentObject = NOELIPSE;
 }
