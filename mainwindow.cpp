@@ -70,14 +70,6 @@ void MainWindow::setBlue(int _b)
     updateColor();
 }
 
-<<<<<<< HEAD
-void MainWindow::novo_escultor()
-{
-
-}
-
-void MainWindow::inserir_voxel()
-=======
 void MainWindow::drawShape(int hClick, int vClick)
 {
     switch(currentObject){
@@ -139,7 +131,7 @@ void MainWindow::updateCoords(int hClick, int vClick)
         ui->horizontalSliderDimY->setValue(hClick);
 }
 
-void MainWindow::on_action_novo_triggered()
+void MainWindow::novo_escultor()
 {
     Dialog *dialog;
     dialog = new Dialog();
@@ -158,7 +150,7 @@ void MainWindow::on_action_novo_triggered()
     }
 }
 
-void MainWindow::on_action_salvar_triggered()
+void MainWindow::salvar()
 {
     QFileDialog dialog;
     QString selectedFilter;
@@ -170,12 +162,11 @@ void MainWindow::on_action_salvar_triggered()
         return;
     }
     e->writeOFF(filename.toStdString());
-
-
 }
 
-void MainWindow::on_action_inserir_voxel_triggered()
->>>>>>> 1c73a1de87b96b93348b8af250cb7faa88dae9f0
+
+
+void MainWindow::inserir_voxel()
 {
     currentObject = VOXEL;
 }

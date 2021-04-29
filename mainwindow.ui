@@ -703,8 +703,8 @@
   </action>
   <action name="actionInserir_voxel">
    <property name="icon">
-    <iconset>
-     <normaloff>recursos/inserir_voxel.png</normaloff>recursos/inserir_voxel.png</iconset>
+    <iconset resource="recursos.qrc">
+     <normaloff>:/icones/recursos/inserir_voxel.png</normaloff>:/icones/recursos/inserir_voxel.png</iconset>
    </property>
    <property name="text">
     <string>Inserir voxel</string>
@@ -780,6 +780,9 @@
    <extends>QWidget</extends>
    <header>plotter.h</header>
    <container>1</container>
+   <slots>
+    <signal>atualizaPosicao(int,int)</signal>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources>
@@ -793,12 +796,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>656</x>
-     <y>93</y>
+     <x>724</x>
+     <y>138</y>
     </hint>
     <hint type="destinationlabel">
-     <x>747</x>
-     <y>95</y>
+     <x>794</x>
+     <y>139</y>
     </hint>
    </hints>
   </connection>
@@ -809,12 +812,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>662</x>
-     <y>196</y>
+     <x>724</x>
+     <y>239</y>
     </hint>
     <hint type="destinationlabel">
-     <x>737</x>
-     <y>199</y>
+     <x>794</x>
+     <y>240</y>
     </hint>
    </hints>
   </connection>
@@ -825,12 +828,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>658</x>
-     <y>256</y>
+     <x>724</x>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
-     <x>738</x>
-     <y>258</y>
+     <x>794</x>
+     <y>299</y>
     </hint>
    </hints>
   </connection>
@@ -841,12 +844,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>623</x>
-     <y>315</y>
+     <x>724</x>
+     <y>356</y>
     </hint>
     <hint type="destinationlabel">
-     <x>735</x>
-     <y>318</y>
+     <x>794</x>
+     <y>357</y>
     </hint>
    </hints>
   </connection>
@@ -857,12 +860,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>618</x>
-     <y>415</y>
+     <x>724</x>
+     <y>444</y>
     </hint>
     <hint type="destinationlabel">
-     <x>758</x>
-     <y>414</y>
+     <x>794</x>
+     <y>445</y>
     </hint>
    </hints>
   </connection>
@@ -873,12 +876,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>654</x>
-     <y>468</y>
+     <x>724</x>
+     <y>496</y>
     </hint>
     <hint type="destinationlabel">
-     <x>739</x>
-     <y>468</y>
+     <x>794</x>
+     <y>497</y>
     </hint>
    </hints>
   </connection>
@@ -889,12 +892,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>646</x>
-     <y>516</y>
+     <x>724</x>
+     <y>548</y>
     </hint>
     <hint type="destinationlabel">
-     <x>733</x>
-     <y>519</y>
+     <x>794</x>
+     <y>549</y>
     </hint>
    </hints>
   </connection>
@@ -953,8 +956,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>448</x>
-     <y>644</y>
+     <x>462</x>
+     <y>668</y>
     </hint>
     <hint type="destinationlabel">
      <x>485</x>
@@ -969,8 +972,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>450</x>
-     <y>698</y>
+     <x>464</x>
+     <y>720</y>
     </hint>
     <hint type="destinationlabel">
      <x>486</x>
@@ -985,8 +988,8 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>453</x>
-     <y>750</y>
+     <x>467</x>
+     <y>772</y>
     </hint>
     <hint type="destinationlabel">
      <x>476</x>
@@ -1017,8 +1020,8 @@
    <slot>setRed(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>705</x>
-     <y>628</y>
+     <x>718</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>818</x>
@@ -1218,6 +1221,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>widgetDraw</sender>
+   <signal>atualizaPosicao(int,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>drawShape(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widgetDraw</sender>
+   <signal>atualizaPosicao(int,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateCoords(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>sair()</slot>
@@ -1234,5 +1269,7 @@
   <slot>remover_esfera()</slot>
   <slot>inserir_elipse()</slot>
   <slot>remover_elipse()</slot>
+  <slot>drawShape(int,int)</slot>
+  <slot>updateCoords(int,int)</slot>
  </slots>
 </ui>
