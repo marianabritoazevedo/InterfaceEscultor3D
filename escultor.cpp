@@ -254,22 +254,22 @@ void Escultor::writeOFF(string filename)
             //face 0
             f << fixed;
             f << 4 << " " << index + 0 << " " << index + 3 << " " << index+2 << " " << index+1 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //face 1
             f << 4 << " " << index + 4 << " " << index + 5 << " " << index+6 << " " << index+7 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //face 2
             f << 4 << " " << index + 0 << " " << index + 1 << " " << index+5 << " " << index+4 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //face 3
             f << 4 << " " << index + 0 << " " << index + 4 << " " << index+7 << " " << index+3 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //face 4
             f << 4 << " " << index + 3 << " " << index + 7 << " " << index+6 << " " << index+2 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //face 5
             f << 4 << " " << index + 1 << " " << index + 2 << " " << index+6 << " " << index+5 << " ";
-            f << setprecision(2) << v[x][y][z].r << " " << setprecision(2) << v[x][y][z].g << " " << setprecision(2) << v[x][y][z].b << "\n";
+            f << setprecision(2) << v[x][y][z].r/255.0 << " " << setprecision(2) << v[x][y][z].g/255.0 << " " << setprecision(2) << v[x][y][z].b/255.0 << "\n";
             //incrementa total de cubos
             total++;
 

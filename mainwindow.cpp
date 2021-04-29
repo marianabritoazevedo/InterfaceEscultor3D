@@ -157,7 +157,8 @@ void MainWindow::novo_escultor()
         ui->horizontalSliderDimY->setMaximum(dimY-1);
         ui->horizontalSliderDimZ->setMaximum(dimZ-1);
     }
-    ui->widgetDraw->setTamanho(dimX, dimY);
+    //ui->widgetDraw->setTamanho(dimX, dimY);
+    ui->widgetDraw->loadMatriz(e->getPlano(ui->horizontalSliderDimZ->value(),XY));
 
 }
 
@@ -215,6 +216,11 @@ void MainWindow::inserir_elipse()
 void MainWindow::remover_elipse()
 {
     currentObject = NOELIPSE;
+}
+
+void MainWindow::slider_eixo_z(int value)
+{
+    ui->widgetDraw->loadMatriz(e->getPlano(value,XY));
 }
 
 void MainWindow::updateColor()

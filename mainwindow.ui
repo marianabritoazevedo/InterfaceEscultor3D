@@ -882,12 +882,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>138</y>
+     <x>733</x>
+     <y>135</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>139</y>
+     <x>803</x>
+     <y>136</y>
     </hint>
    </hints>
   </connection>
@@ -899,11 +899,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>732</x>
-     <y>233</y>
+     <y>229</y>
     </hint>
     <hint type="destinationlabel">
      <x>802</x>
-     <y>234</y>
+     <y>230</y>
     </hint>
    </hints>
   </connection>
@@ -915,11 +915,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>732</x>
-     <y>293</y>
+     <y>286</y>
     </hint>
     <hint type="destinationlabel">
      <x>802</x>
-     <y>294</y>
+     <y>287</y>
     </hint>
    </hints>
   </connection>
@@ -931,11 +931,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>732</x>
-     <y>352</y>
+     <y>342</y>
     </hint>
     <hint type="destinationlabel">
      <x>802</x>
-     <y>353</y>
+     <y>343</y>
     </hint>
    </hints>
   </connection>
@@ -946,12 +946,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>444</y>
+     <x>732</x>
+     <y>433</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>445</y>
+     <x>802</x>
+     <y>434</y>
     </hint>
    </hints>
   </connection>
@@ -962,12 +962,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>496</y>
+     <x>732</x>
+     <y>489</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>497</y>
+     <x>802</x>
+     <y>490</y>
     </hint>
    </hints>
   </connection>
@@ -978,12 +978,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>724</x>
-     <y>548</y>
+     <x>732</x>
+     <y>545</y>
     </hint>
     <hint type="destinationlabel">
-     <x>794</x>
-     <y>549</y>
+     <x>802</x>
+     <y>546</y>
     </hint>
    </hints>
   </connection>
@@ -998,8 +998,8 @@
      <y>629</y>
     </hint>
     <hint type="destinationlabel">
-     <x>735</x>
-     <y>650</y>
+     <x>793</x>
+     <y>645</y>
     </hint>
    </hints>
   </connection>
@@ -1014,8 +1014,8 @@
      <y>688</y>
     </hint>
     <hint type="destinationlabel">
-     <x>735</x>
-     <y>700</y>
+     <x>793</x>
+     <y>696</y>
     </hint>
    </hints>
   </connection>
@@ -1026,12 +1026,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>635</x>
-     <y>748</y>
+     <x>723</x>
+     <y>746</y>
     </hint>
     <hint type="destinationlabel">
-     <x>735</x>
-     <y>750</y>
+     <x>793</x>
+     <y>747</y>
     </hint>
    </hints>
   </connection>
@@ -1058,8 +1058,8 @@
    <slot>setRed(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>665</x>
-     <y>649</y>
+     <x>723</x>
+     <y>644</y>
     </hint>
     <hint type="destinationlabel">
      <x>818</x>
@@ -1074,8 +1074,8 @@
    <slot>setGreen(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>665</x>
-     <y>699</y>
+     <x>723</x>
+     <y>695</y>
     </hint>
     <hint type="destinationlabel">
      <x>821</x>
@@ -1090,8 +1090,8 @@
    <slot>setBlue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>665</x>
-     <y>749</y>
+     <x>723</x>
+     <y>746</y>
     </hint>
     <hint type="destinationlabel">
      <x>821</x>
@@ -1291,6 +1291,70 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>horizontalSliderDimZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slider_eixo_z(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>647</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>623</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderDimZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberDimZ</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>645</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>348</x>
+     <y>647</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderDimX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberDimX</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>309</x>
+     <y>702</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>705</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderDimY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberDimY</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>762</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>765</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>sair()</slot>
@@ -1309,5 +1373,6 @@
   <slot>remover_elipse()</slot>
   <slot>drawShape(int,int)</slot>
   <slot>updateCoords(int,int)</slot>
+  <slot>slider_eixo_z(int)</slot>
  </slots>
 </ui>

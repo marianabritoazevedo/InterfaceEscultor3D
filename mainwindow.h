@@ -51,6 +51,7 @@ private slots:
     void remover_esfera();
     void inserir_elipse();
     void remover_elipse();
+    void slider_eixo_z(int);
 
 };
 #endif // MAINWINDOW_H

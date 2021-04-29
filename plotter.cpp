@@ -9,12 +9,13 @@
 #include <cmath>
 #include <iostream>
 #include <escultor.h>
+#include <qdebug.h>
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
     nl = 10;
     nc = 10;
-    Escultor(nl,nc,10);
+    //Escultor(nl,nc,10);
     pressed = false;
     larguraTela = rect().width();
     alturaTela = rect().height();
@@ -56,9 +57,9 @@ void Plotter::paintEvent(QPaintEvent *e)
     gradient.setCenter(-0.15*dimCelula, -0.15*dimCelula);
     p.setPen(pen);
     p.drawRect(rect());
-
-    for(uint i = 0; i < v.size(); i++){
-        for(uint j = 0; j < v[i].size(); j++){
+    qDebug() << nl << nc << v.size() << v[0].size();
+    for(int i = 0; i < nl; i++){
+        for(int j = 0; j < nc; j++){
             if(v[i][j].isOn == true){
                 p.save();
                 p.translate(j*dimCelula+borderh+dimCelula/2,
@@ -85,7 +86,7 @@ void Plotter::setTamanho(int _nl, int _nc)
 {
     nl = _nl;
     nc = _nc;
-    update();
+    repaint();
 }
 
 void Plotter::mousePressEvent(QMouseEvent *event)
